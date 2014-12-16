@@ -126,6 +126,13 @@
     return self.ascent + self.descent + self.leading;
 }
 
+- (CGFloat)width
+{
+    [self calculateTypographicalBounds];
+    NSNumber *width = _typographicalBounds[MYSTypographicalBoundsWidthKey];
+    return [width floatValue];
+}
+
 - (CGAffineTransform)textMatrix
 {
     return CTRunGetTextMatrix(_runRef);
@@ -169,11 +176,12 @@
             CGFloat ascent;
             CGFloat descent;
             CGFloat leading;
-            CTRunGetTypographicBounds(_runRef, CFRangeMake(0, CTRunGetGlyphCount(_runRef)), &ascent, &descent, &leading);
+            CGFloat width = CTRunGetTypographicBounds(_runRef, CFRangeMake(0, CTRunGetGlyphCount(_runRef)), &ascent, &descent, &leading);
             _typographicalBounds = @{
                                      MYSTypographicalBoundsAscentKey    : @(ascent),
                                      MYSTypographicalBoundsDescentKey   : @(descent),
-                                     MYSTypographicalBoundsLeadingKey   : @(leading)
+                                     MYSTypographicalBoundsLeadingKey   : @(leading),
+                                     MYSTypographicalBoundsWidthKey   : @(width)
                                      };
         }
     }

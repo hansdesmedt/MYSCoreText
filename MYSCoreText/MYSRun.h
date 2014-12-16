@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Mysterious Trousers. All rights reserved.
 //
 
+#import <CoreText/CoreText.h>
 
 @class MYSLine;
 
@@ -85,6 +86,8 @@
  *  The leading of a line is the space between the tops line's glyph's bounding box and the bottom line's glyph's bb.
  */
 @property (nonatomic, assign, readonly) CGFloat leading;
+
+@property (nonatomic, assign, readonly) CGFloat width;
 
 /**
  *  The lineheight of this line.

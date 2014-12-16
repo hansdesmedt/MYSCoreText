@@ -224,10 +224,8 @@
     CGRect horizontalBounds     = CTLineGetBoundsWithOptions(_lineRef, kCTLineBoundsUseGlyphPathBounds);
     CGRect verticalBounds       = CTLineGetBoundsWithOptions(_lineRef, kCTLineBoundsUseOpticalBounds);
 
-
-
     CGRect bounds               = CGRectZero;
-    bounds.size.width           = horizontalBounds.origin.x + horizontalBounds.size.width;
+    bounds.size.width           = horizontalBounds.size.width;
     bounds.size.height          = verticalBounds.size.height + 1;
     bounds.origin               = self.origin;
     bounds.origin.y            -= self.descent;
@@ -316,9 +314,9 @@
     [desc appendString:@"\n"];
     [desc appendFormat:@"range: %@", NSStringFromRange(self.range)];
     [desc appendString:@"\n"];
-    [desc appendFormat:@"boundingBox: %@", NSStringFromRect(self.boundingBox)];
+    //[desc appendFormat:@"boundingBox: %@", NSStringFromRect(self.boundingBox)];
     [desc appendString:@"\n"];
-    [desc appendFormat:@"line origin: %@", NSStringFromPoint(self.origin)];
+    //[desc appendFormat:@"line origin: %@", NSStringFromPoint(self.origin)];
     [desc appendString:@"\n"];
     [desc appendFormat:@"glyph count: %d", (int)self.glyphCount];
     [desc appendString:@"\n"];

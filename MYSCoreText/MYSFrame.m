@@ -342,7 +342,7 @@
             CGRect r        = line.boundingBox;
             r.origin.x      = [line offsetOfCharacterAtIndex:MYSNSRangeStartIndex(range)];
             r.size.width    = [line offsetOfCharacterAtIndex:MYSNSRangeEndIndex(range) + 1] - r.origin.x;
-            [rects addObject:[NSValue valueWithRect:r]];
+            [rects addObject:[NSValue valueWithCGRect:r]];
             return rects;
         }
 
@@ -351,7 +351,7 @@
             CGRect r        = line.boundingBox;
             r.origin.x      = [line offsetOfCharacterAtIndex:MYSNSRangeStartIndex(range)];
             r.size.width    = self.boundingBox.size.width - r.origin.x;
-            [rects addObject:[NSValue valueWithRect:r]];
+            [rects addObject:[NSValue valueWithCGRect:r]];
             continue;
         }
 
@@ -370,7 +370,7 @@
                 r.size.width = self.boundingBox.size.width;
             }
 
-            [rects addObject:[NSValue valueWithRect:r]];
+            [rects addObject:[NSValue valueWithCGRect:r]];
             continue;
         }
 
@@ -379,7 +379,7 @@
             CGRect r        = line.boundingBox;
             r.origin.x      = 0;
             r.size.width    = [line offsetOfCharacterAtIndex:MYSNSRangeEndIndex(range) + 1];
-            [rects addObject:[NSValue valueWithRect:r]];
+            [rects addObject:[NSValue valueWithCGRect:r]];
             return rects;
         }
     }
@@ -522,7 +522,7 @@
     [desc appendString:@"\n"];
     [desc appendFormat:@"range: %@", NSStringFromRange(self.range)];
     [desc appendString:@"\n"];
-    [desc appendFormat:@"boundingBox: %@", NSStringFromRect(self.boundingBox)];
+    //[desc appendFormat:@"boundingBox: %@", NSStringFromRect(self.boundingBox)];
     return desc;
 }
 

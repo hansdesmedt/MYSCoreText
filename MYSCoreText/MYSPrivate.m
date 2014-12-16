@@ -11,3 +11,4 @@
 NSString *const MYSTypographicalBoundsAscentKey      = @"MYSTypographicBoundsAscentKey";
 NSString *const MYSTypographicalBoundsDescentKey     = @"MYSTypographicBoundsDescentKey";
 NSString *const MYSTypographicalBoundsLeadingKey     = @"MYSTypographicBoundsLeadingKey";
+NSString *const MYSTypographicalBoundsWidthKey     = @"MYSTypographicBoundsWidthKey";

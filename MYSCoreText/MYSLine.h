@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Mysterious Trousers. All rights reserved.
 //
 
+#import <CoreText/CoreText.h>
 
 @class MYSFrame;
 @class MYSRun;

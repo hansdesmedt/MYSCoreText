@@ -5,6 +5,8 @@
 //  Created by Adam Kirk on 8/6/13.
 //  Copyright (c) 2013 Mysterious Trousers. All rights reserved.
 //
+
+#import <CoreText/CoreText.h>
 #import "MYSTypesetter.h"
 #import "MYSFramesetter.h"
 

@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Mysterious Trousers. All rights reserved.
 //
 
+#import <CoreText/CoreText.h>
 
 @interface MYSGlyph : NSObject
 
@@ -107,7 +108,7 @@
 /**
  *	Returns an NSCharacterCollection value specifying the glyph–to–character identifier mapping of the receiver.
  */
-@property (nonatomic, assign, readonly) NSCharacterCollection characterCollection;
+@property (nonatomic, assign, readonly) CTCharacterCollection characterCollection;
 
 /**
  *	Get the CTGlyphInfo reference that backs this glyph.

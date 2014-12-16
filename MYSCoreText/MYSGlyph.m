@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Mysterious Trousers. All rights reserved.
 //
 
+#import <CoreText/CoreText.h>
 #import "MYSRun_Private.h"
 #import "MYSLine_Private.h"
 #import "MYSFrame_Private.h"
@@ -90,7 +91,7 @@
     return CTGlyphInfoGetCharacterIdentifier(_glyphInfoRef);
 }
 
-- (NSCharacterCollection)characterCollection
+- (CTCharacterCollection)characterCollection
 {
     return CTGlyphInfoGetCharacterCollection(_glyphInfoRef);
 }

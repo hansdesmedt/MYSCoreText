@@ -10,6 +10,7 @@
 extern NSString *const MYSTypographicalBoundsAscentKey;
 extern NSString *const MYSTypographicalBoundsDescentKey;
 extern NSString *const MYSTypographicalBoundsLeadingKey;
+extern NSString *const MYSTypographicalBoundsWidthKey;
 
 
 /**
